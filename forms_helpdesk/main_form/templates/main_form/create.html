@@ -1,0 +1,26 @@
+{% extends 'main_form/layout.html' %}
+
+{% block title_block %}
+Форма по добавлению статьи
+{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Техническая поддержка АО "Фазатрон"</h1>
+        <form method="post">
+            {%csrf_token%}
+            {{ form.Recipient }}<br>
+            {{ form.Service }}<br>
+            {{ form.Location }}<br>
+            {{ form.Office }}<br>
+            {{ form.Floor }}<br>
+            {{ form.Building }}<br>
+            {{ form.Topic }}<br>
+            {{ form.Main_text }}<br>
+            {{ form.priority }}<br>
+            <button class="btn btn-success" type="submit">Отправить заявку</button>
+            <span>{{ error }}</span>
+        </form>
+    </div>
+
+{% endblock %}

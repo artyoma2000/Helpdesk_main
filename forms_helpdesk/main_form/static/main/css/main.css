@@ -1,0 +1,34 @@
+body {
+    background: #2c2c2c;
+}
+
+
+main .features{
+    float: center;
+    color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    width: 75%;
+}
+
+a, u {
+  text-decoration: none;
+}
+
+main .features hi{front-size: 50px;}
+main .features p{max-width: 400px; margin: 0 auto;}
+
+.alert-warning
+{
+    float: center;
+    clear: both;
+    width: 400px;
+    margin: 0 auto;
+}
+
+form{
+
+  width:500px;
+  margin: 0 auto;
+
+}
