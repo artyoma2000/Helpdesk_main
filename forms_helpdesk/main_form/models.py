@@ -23,14 +23,14 @@ class Articles(models.Model):
     ]
 
     Recipient = models.TextField('ФИО получателя', max_length=50, default='')
-    Service = models.CharField('Сервис', max_length=50, choices=Service_TYPES)
-    Location = models.CharField('Расположение', max_length=250, choices=Location_TYPES)
+    Service = models.CharField('Сервис', max_length=50, choices=Service_TYPES, default='')
+    Location = models.CharField('Расположение', max_length=250, choices=Location_TYPES, default='')
     Office = models.TextField('Кабинет', max_length=50, default='')
     Floor = models.TextField('Этаж', max_length=50, default='')
     Building = models.TextField('Корпус', max_length=50, default='')
     Topic = models.TextField('Тема', max_length=50, default='')
-    Main_text = models.TextField('Опишите проблему')
-    priority = models.CharField('Приоритет', max_length=50, choices=priority_TYPES)
+    Main_text = models.TextField('Опишите проблему', default='')
+    priority = models.CharField('Приоритет', max_length=50, choices=priority_TYPES, default='')
     time = models.DateTimeField(auto_now_add=True),
     is_new = models.BooleanField(default=True)
 
